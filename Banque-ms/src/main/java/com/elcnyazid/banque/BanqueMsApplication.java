@@ -1,4 +1,4 @@
-package com.elcnyazid;
+package com.elcnyazid.banque;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

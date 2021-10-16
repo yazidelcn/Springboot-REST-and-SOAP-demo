@@ -1,4 +1,4 @@
-package com.elcnyazid;
+package com.elcnyazid.banque;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
