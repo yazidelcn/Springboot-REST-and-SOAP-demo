@@ -25,7 +25,7 @@ public class BanqueMsApplication {
 			compteRepository.save(new Compte(null, Math.random()*9000, new Date(), Type.EPARGNE));
 			compteRepository.save(new Compte(null, Math.random()*9000, new Date(), Type.COURANT));
 			compteRepository.findAll().forEach(c ->{
-				System.out.println(c	);
+				System.out.println(c);
 			});
 		};
 	}
