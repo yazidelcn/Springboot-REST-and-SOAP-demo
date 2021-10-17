@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class BanqueMsApplication {
@@ -30,6 +31,11 @@ public class BanqueMsApplication {
 			compteRepository.save(new Compte(null, Math.random()*9000, new Date(), Type.COURANT, client2));
 			compteRepository.findAll().forEach(c ->{
 				System.out.println(c.getSolde());
+			});
+			System.out.println("***********************");
+			List<Compte> search = compteRepository.findByType(Type.EPARGNE);
+			search.forEach(s->{
+				System.out.println(s.getId() + " " + s.getSolde()+ " "+ s.getType());
 			});
 		};
 	}
