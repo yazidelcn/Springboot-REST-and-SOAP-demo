@@ -6,8 +6,10 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 @Entity
+@XmlRootElement
 @Data @NoArgsConstructor @AllArgsConstructor @ToString
 public class Compte {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

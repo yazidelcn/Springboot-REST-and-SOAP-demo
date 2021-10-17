@@ -16,14 +16,14 @@ public class CompteRestJaxRSAPI {
 
     @Path("/comptes")
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public List<Compte> compteList(){
         return  compteRepository.findAll();
     }
 
     @Path("/comptes/{id}")
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Compte getCompteById(@PathParam(value = "id") Long id){
         return compteRepository.findById(id).get();
     }
